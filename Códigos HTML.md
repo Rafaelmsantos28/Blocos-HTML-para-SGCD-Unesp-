@@ -24,9 +24,33 @@ Código HTML para criação de título com linha azul e inserção de imagem-bot
 ## Código para Bandeiras EN e ES
 
 ```
-<img style="margin-top: 0px; margin-bottom: 0px;" title="English" onmouseover="this.src='https://www2.unesp.br/Home/propg/2023_idioma_eng-pb.png';" onmouseout="this.src='https://www2.unesp.br/Home/propg/2023_idioma_eng.png';" usemap="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/english/" src="https://www2.unesp.br/Home/propg/2023_idioma_eng.png" alt="English" width="64" height="64">
-
-
-<img style="margin-top: 0px; margin-bottom: 0px; margin-left: 16px;" title="Idioma Castelhano" onmouseover="this.src='https://www2.unesp.br/Home/propg/2023_idioma_esp-pb.png';" onmouseout="this.src='https://www2.unesp.br/Home/propg/2023_idioma_esp.png';" usemap="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/espanol/" src="https://www2.unesp.br/Home/propg/2023_idioma_esp.png" alt="Idioma Castelhano" width="64" height="64">
+<p style="text-align: right;">
+    <a href="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/english/" target="_blank">
+        <img 
+            style="margin-top: 0px; margin-bottom: 0px;" 
+            title="English" 
+            onmouseover="this.src='https://www2.unesp.br/Home/propg/2023_idioma_eng-pb.png';" 
+            onmouseout="this.src='https://www2.unesp.br/Home/propg/2023_idioma_eng.png';" 
+            usemap="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/english/" 
+            src="https://www2.unesp.br/Home/propg/2023_idioma_eng.png" 
+            alt="English" 
+            width="64" 
+            height="64"
+        >
+    </a>
+    <a href="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/espanol/" target="_blank">
+        <img 
+            style="margin-top: 0px; margin-bottom: 0px; margin-left: 16px;" 
+            title="Idioma Castelhano" 
+            onmouseover="this.src='https://www2.unesp.br/Home/propg/2023_idioma_esp-pb.png';" 
+            onmouseout="this.src='https://www2.unesp.br/Home/propg/2023_idioma_esp.png';" 
+            usemap="https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/educacao/espanol/" 
+            src="https://www2.unesp.br/Home/propg/2023_idioma_esp.png" 
+            alt="Idioma Castelhano" 
+            width="64" 
+            height="64"
+        >
+    </a>
+</p>
 
 ```
