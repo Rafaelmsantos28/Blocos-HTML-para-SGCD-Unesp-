@@ -1,5 +1,9 @@
-# HTML-para-o-PPGGMA
-Código HTML para criação de título com linha azul e inserção de imagem-botão.
+# Blocos HTML para sistema SGCD
+O documento aborda blocos HTML para:
+- títulos com linha azul abaixo
+- Imagens-botão
+- Botões de Bandeira em inglês e espanhol
+- Carrossel de três imagens
 
 
 ## Criação de título com linha azul:
