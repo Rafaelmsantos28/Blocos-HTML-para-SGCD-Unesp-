@@ -91,3 +91,48 @@ O documento aborda blocos HTML para:
 
 
 ```
+
+
+## Código para Carrossel de Imagens que mudam com o tempo
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+</head>
+<body onload="(function() { setInterval(function() { const slides = document.getElementById('slides'); const totalSlides = slides.children.length; let currentSlide = parseInt(slides.getAttribute('data-current-slide')) || 0; currentSlide = (currentSlide + 1) % totalSlides; slides.setAttribute('data-current-slide', currentSlide); slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)'; }, 3000); })()">
+
+
+<!-- Caso queira aumentar o tamanho de suas imagens e a opção do SGCD não estiver te satisfazendo, aumente o valor dos pixels de "max-width" abaixo -->
+
+    <div id="carousel" style="position: relative; width: 80%; max-width: 600px; margin: auto; overflow: hidden;">
+
+
+        <div id="slides" style="display: flex; transition: transform 0.5s ease;" data-current-slide="0">
+
+            <!-- É aqui embaixo que você mudará a sua imagem. Lembre-se de ter adicionado sua imagem no banco de imagens -->
+            <!-- OBS.: Para melhor experiência de usuário e evitar imagens distorcidas, garanta que todas as imagens tenham as mesmas dimensões -->
+
+            <img src="imgcarrossel1.png" style="width: 100%;" alt="Imagem 1">
+            <img src="imgcarrossel2.png" style="width: 100%;" alt="Imagem 2">
+            <img src="imgcarrossel3.png" style="width: 100%;" alt="Imagem 3">
+        </div>
+
+
+ <!-- NÃO ALTERAR NADA ABAIXO DESSA LINHA -->
+
+        <button onclick="(function() { const slides = document.getElementById('slides'); const totalSlides = slides.children.length; let currentSlide = parseInt(slides.getAttribute('data-current-slide')) || 0; currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; slides.setAttribute('data-current-slide', currentSlide); slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)'; })()" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>
+        <button onclick="(function() { const slides = document.getElementById('slides'); const totalSlides = slides.children.length; let currentSlide = parseInt(slides.getAttribute('data-current-slide')) || 0; currentSlide = (currentSlide + 1) % totalSlides; slides.setAttribute('data-current-slide', currentSlide); slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)'; })()" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+
+
+<!-- NÃO ALTERAR NADA ACIMA DESSA LINHA -->
+    </div>
+</body>
+</html>
+
+
+
+```
