@@ -10,7 +10,7 @@ O documento aborda blocos HTML para as páginas da Unesp que usam o sistema SGCD
 
 ## Código para Imagem-botão:
 ```
-<a href="[Link de redirecionamento]">
+<a href="[Link de redirecionamento]" onclick="window.location.href=this.href; window.scrollTo(0, 0); return false;">
     <img 
     title="[Título do botão]" 
     onmouseover="this.src='[ "Link" da imagem para o mouseover ]';" 
