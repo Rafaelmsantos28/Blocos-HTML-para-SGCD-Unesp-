@@ -1,9 +1,5 @@
 # Blocos HTML para sistema SGCD
-O documento aborda blocos HTML para:
-- títulos com linha azul abaixo
-- Imagens-botão
-- Botões de Bandeira em inglês e espanhol
-- Carrossel de três imagens
+O documento aborda blocos HTML para as páginas da Unesp que usam o sistema SGCD
 
 
 ## Criação de título com linha azul:
@@ -74,9 +70,9 @@ O documento aborda blocos HTML para:
             <!-- É aqui embaixo que você mudará a sua imagem. Lembre-se de ter adicionado sua imagem no banco de imagens -->
             <!-- OBS.: Para melhor experiência de usuário e evitar imagens distorcidas, garanta que todas as imagens tenham as mesmas dimensões -->
             
-            <img src="[Caminho do banco de imagens até a imagem1]" style="width: 100%;" alt="Imagem 1">
-            <img src="[Caminho do banco de imagens até a imagem2]" style="width: 100%;" alt="Imagem 2">
-            <img src="[Caminho do banco de imagens até a imagem3]" style="width: 100%;" alt="Imagem 3">
+            <img src="[Caminho do banco de imagens até a imagem1]" style="width: 100%;" alt="[Nome da imagem 1]">
+            <img src="[Caminho do banco de imagens até a imagem2]" style="width: 100%;" alt="[Nome da imagem 2]">
+            <img src="[Caminho do banco de imagens até a imagem3]" style="width: 100%;" alt="[Nome da imagem 3]">
             
             
         </div>
@@ -96,16 +92,6 @@ O documento aborda blocos HTML para:
 ## Código para Carrossel de Imagens que mudam com o tempo
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Imagens</title>
-</head>
-<body onload="(function() { setInterval(function() { const slides = document.getElementById('slides'); const totalSlides = slides.children.length; let currentSlide = parseInt(slides.getAttribute('data-current-slide')) || 0; currentSlide = (currentSlide + 1) % totalSlides; slides.setAttribute('data-current-slide', currentSlide); slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)'; }, 3000); })()">
-
-
 <!-- Caso queira aumentar o tamanho de suas imagens e a opção do SGCD não estiver te satisfazendo, aumente o valor dos pixels de "max-width" abaixo -->
 
     <div id="carousel" style="position: relative; width: 80%; max-width: 600px; margin: auto; overflow: hidden;">
@@ -114,11 +100,27 @@ O documento aborda blocos HTML para:
         <div id="slides" style="display: flex; transition: transform 0.5s ease;" data-current-slide="0">
 
             <!-- É aqui embaixo que você mudará a sua imagem. Lembre-se de ter adicionado sua imagem no banco de imagens -->
-            <!-- OBS.: Para melhor experiência de usuário e evitar imagens distorcidas, garanta que todas as imagens tenham as mesmas dimensões -->
+            <!-- OBS.: Para melhor experiência de usuário e evitar imagens distorcidas, garanta que todas as imagens tenham o mesmo tamanho -->
 
-            <img src="imgcarrossel1.png" style="width: 100%;" alt="Imagem 1">
-            <img src="imgcarrossel2.png" style="width: 100%;" alt="Imagem 2">
-            <img src="imgcarrossel3.png" style="width: 100%;" alt="Imagem 3">
+            <img onload="(function() { setInterval(function() { const slides = document.getElementById('slides'); const totalSlides = slides.children.length; let currentSlide = parseInt(slides.getAttribute('data-current-slide')) || 0; currentSlide = (currentSlide + 1) % totalSlides; slides.setAttribute('data-current-slide', currentSlide); slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)'; }, 3000); })()" 
+            
+                 src="[Caminho do banco de imagens até a imagem 1]" style="width: 100%;" alt="[Nome da imagem 1]" >
+            <img src="[Caminho do banco de imagens até a imagem 2]" style="width: 100%;" alt="[Nome da imagem 2]" >
+            <img src="[Caminho do banco de imagens até a imagem 3]" style="width: 100%;" alt="[Nome da imagem 3]" >
+            
+            
+            <!-- Insira novas imagens copiando o mesma linha acima, alterando apenas o nome da imagem em "src" e em "alt". Exemplo:
+            
+            <img src="Home/Pos-Graduacao44/programasdepos/geocienciasemeioambiente/quintoevento.png" style="width: 100%;" alt="Quinto evento" >
+            
+            -->
+            
+            <!-- Insira novas imagens abaixo desse comentário -->  
+            
+        
+        
+            
+            <!-- Insira novas imagens acima desse comentário -->
         </div>
 
 
@@ -130,8 +132,7 @@ O documento aborda blocos HTML para:
 
 <!-- NÃO ALTERAR NADA ACIMA DESSA LINHA -->
     </div>
-</body>
-</html>
+
 
 
 
