@@ -5,7 +5,7 @@ O documento aborda blocos HTML para as páginas da Unesp que usam o sistema SGCD
 ## Criação de título com linha azul:
 ```
 <h3 span="" style="color:#000"><b>[Título]</b></h3>
-<div span="" style="background-color:#009FE0; padding-bottom:5px; margin-bottom:15px;" ;=""><p></p></div>
+<div span="" style="background-color:#009FE0; padding-bottom:5px; margin-bottom:15px;" ></div>
 ```
 
 ## Código para Imagem-botão:
